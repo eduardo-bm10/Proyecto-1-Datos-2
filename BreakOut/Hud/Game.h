@@ -7,7 +7,11 @@
 
 
 class Game {
-
+private:
+    bool isActive;
+public:
+    void start();
+    void close();
 };
 
 
