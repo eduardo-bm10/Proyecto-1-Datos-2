@@ -24,7 +24,7 @@ private:
     vector<int> clientesDescriptor; //almacena los clientes que se conecten
 
     bool crearSocket();
-    bool enlazarKernel();
+    bool enlazarKernel(); // escucha clientes y define cuantos va a escuchar
     static void* controladorCliente(void* obj);
 
 };

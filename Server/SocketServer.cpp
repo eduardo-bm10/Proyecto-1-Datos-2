@@ -13,3 +13,11 @@ bool SocketServer::crearSocket() {
     memset(&info.sin_zero, 0, sizeof(info.sin_zero)); //limpiamos la estructura
     return true;
 }
+
+bool SocketServer::enlazarKernel() {
+    if ((bind(descriptor, (sockaddr *)&info, (socklen_t)sizeof(info))) < 0) //enlaza al socket con el kernel
+        return false;
+    // escuchar a los clientes
+    listen(descriptor,4);
+    return true;
+}
