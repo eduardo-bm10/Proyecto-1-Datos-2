@@ -8,18 +8,21 @@
 #include "SFML/Window.hpp"
 #include "SFML/Audio.hpp"
 
-void Game::start() {
-    this->isActive = true;
-    sf::RenderWindow window(sf::VideoMode(800, 600), "BreakOut");
+using namespace sf;
 
-    while (isActive) {
-        window.display();
-        if () {
-            close();
+void Game::start() {
+    RenderWindow window(VideoMode(800, 600), "BreakOut", Style::Titlebar | Style::Close);
+    Event event;
+    ///Game loop
+    while (window.isOpen()) {
+        while (window.pollEvent(event)) {
+            if (event.type == Event::Closed) {
+                window.close();
+                break;
+            }
         }
     }
+    window.clear();
+    window.display();
 }
 
-void Game::close() {
-    this->isActive = false;
-}

@@ -7,11 +7,10 @@
 
 
 class Game {
-private:
-    bool isActive;
 public:
+    bool isActive;
+    bool* activePtr = &isActive;
     void start();
-    void close();
 };
 
 
