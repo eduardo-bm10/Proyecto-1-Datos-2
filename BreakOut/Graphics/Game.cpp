@@ -3,10 +3,7 @@
 //
 
 #include "Game.h"
-#include <SFML/Graphics.hpp>
-#include "SFML/System.hpp"
-#include "SFML/Window.hpp"
-#include "SFML/Audio.hpp"
+#include "GameEngine.h"
 
 using namespace sf;
 
@@ -23,6 +20,7 @@ void Game::start() {
         }
     }
     window.clear();
+    ///Game logic coding
     window.display();
 }
 
