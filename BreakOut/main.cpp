@@ -1,9 +1,14 @@
-#include "Hud/Game.h"
-#include "Graphics/Block.h"
+#include "Source/Game.h"
 
-using namespace Block;
 int main() {
+    ///Init Game object
     Game game = new Game();
-    game.start();
+    ///Game loop
+    while (game.isRunning()) {
+        /// Update in-game stuff
+        game.update();
+        ///Show updates on screen
+        game.render();
+    }
     return 0;
 }
