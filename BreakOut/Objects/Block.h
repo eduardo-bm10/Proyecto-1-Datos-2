@@ -17,15 +17,18 @@
  */
 class Block : public sf::RectangleShape {
 private:
-    int type;
+    Block* ref;
+    int givenPoints;
     int lives;
     bool deep;
+    void initType(int type);
+    void initVisual();
 public:
     Block(int type);
     void getHit();
-    bool isAlive();
     void getDestroyed();
-
+    const bool isDeep() const;
+    int getPoints();
 }
 
 
