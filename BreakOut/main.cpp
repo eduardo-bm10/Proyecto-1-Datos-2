@@ -1,8 +1,13 @@
 #include "Source/Game.h"
 
+/**
+ * Method main runs the C++ program.
+ * Creates an instante of game and keeps running it.
+ * @return 0
+ */
 int main() {
     ///Init Game object
-    Game game = new Game();
+    Game game;
     ///Game loop
     while (game.isRunning()) {
         /// Update in-game stuff

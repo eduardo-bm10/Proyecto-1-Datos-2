@@ -30,15 +30,26 @@ void Game::initVariables() {
 
 void Game::update() {
     while (this->window->pollEvent(this->event)) {
-        if (this->event.type == sf::Event::Closed) {
-            this.window->close();
-            break;
+        switch (this->event.type) {
+            case sf::Event::Closed:
+                this.window->close();
+                break;
+            case sf::Event::KeyPressed:
+                if (this->event.key == sf::Keyboard::Right) {
+
+                }
+                else if (this->event.key == sf::Keyboard::Left) {
+
+                }
+
         }
     }
 }
 
 void Game::render() {
     this->window->clear(sf::Color::White);
+
+    this->window->display();
 }
 
 const bool Game::isRunning() const {
