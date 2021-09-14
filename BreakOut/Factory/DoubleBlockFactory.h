@@ -7,6 +7,11 @@
 
 #include "BlockFactory.h"
 
+/**
+ * Class DoubleBlockFactory uses the method to create a double block
+ * @extends BlockFactory
+ * @author Eduardo Bolivar
+ */
 class DoubleBlockFactory:public BlockFactory {
 public:
     Block createBlock() override;

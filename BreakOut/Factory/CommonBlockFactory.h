@@ -7,6 +7,11 @@
 
 #include "BlockFactory.h"
 
+/**
+ * Class CommonBlockFactory uses the method to create a common block.
+ * @extends BlockFactory
+ * @author Eduardo Bolivar
+ */
 class CommonBlockFactory:public BlockFactory {
 public:
     Block createBlock() override;

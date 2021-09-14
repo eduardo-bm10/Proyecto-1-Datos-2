@@ -7,6 +7,11 @@
 
 #include "BlockFactory.h"
 
+/**
+ * Class DeepBlockFactory uses the method to create a deep block.
+ * @extends BlockFactory
+ * @author Eduardo Bolivar
+ */
 class DeepBlockFactory:public BlockFactory {
 public:
     Block createBlock() override;

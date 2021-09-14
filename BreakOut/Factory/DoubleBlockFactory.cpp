@@ -6,6 +6,11 @@
 
 using namespace sf;
 
+/**
+ * Method createBlock creates a rectangle and sets the attributes for a double block
+ * @author Eduardo Bolivar
+ * @return block
+ */
 Block DoubleBlockFactory::createBlock() {
     Block block;
     block.getRect()->setSize(Vector2f(40.f, 10.f))

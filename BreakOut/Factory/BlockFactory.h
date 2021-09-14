@@ -7,6 +7,10 @@
 
 #include "/home/eduardo/Documentos/GitHub/Proyecto-1-Datos-2/BreakOut/Objects/Block.h"
 
+/**
+ * Class BlockFactory provides a single method that is used to create all types of required blocks.
+ * @author Eduardo Bolivar
+ */
 class BlockFactory {
 protected:
     virtual Block createBlock();

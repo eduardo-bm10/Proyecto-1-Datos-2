@@ -7,6 +7,11 @@
 
 #include "BlockFactory.h"
 
+/**
+ * Class InnerBlockFactory uses the method to create a inner block
+ * @extends BlockFactory
+ * @author Eduardo Bolivar
+ */
 class InnerBlockFactory:public BlockFactory {
 public:
     Block createBlock() override;

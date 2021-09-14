@@ -7,6 +7,11 @@
 
 #include "BlockFactory.h"
 
+/**
+ * Class TripleBlockFactory uses the method to create a triple block
+ * @extends BlockFactory
+ * @author Eduardo Bolivar
+ */
 class TripleBlockFactory:public BlockFactory {
 public:
     Block createBlock() override;
