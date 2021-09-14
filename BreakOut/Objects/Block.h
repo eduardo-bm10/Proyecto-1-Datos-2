@@ -15,20 +15,24 @@
  * Class Block creates objects for the blocks that need to be destroyed.
  * Provides an array of block objects, and a constructor to define shapes and color of blocks.
  */
-class Block : public sf::RectangleShape {
+class Block {
 private:
-    Block* ref;
+    sf::RectangleShape* rectangle;
     int givenPoints;
     int lives;
     bool deep;
-    void initType(int type);
-    void initVisual();
+    void initPtr();
 public:
-    Block(int type);
+    Block();
     void getHit();
     void getDestroyed();
     const bool isDeep() const;
+    void setDeep(bool deep);
+    void setPoints(int points);
     int getPoints();
+    void setLives(int lives);
+    int getLives();
+    sf::RectangleShape* getRect();
 }
 
 
